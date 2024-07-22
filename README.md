@@ -1,5 +1,5 @@
 # Shopping Security System Project
-
+-----
 This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local installation of MySql database with login details. It also provides unit testing capabilities.
 
 Main focus of this project is to show encryption and MFA capabilities with fully functional DB and data exchange capabilities.
@@ -9,7 +9,7 @@ As this project is implemented using local DB and Jupyter Notebook most of the c
 -----
 
 ## Libraries Required
-
+-----
 Before running the project, make sure you have the following Python libraries installed:
 - MySQL Connector library
 - Password validator library
@@ -26,7 +26,7 @@ With according commands (SECTION 1):
 !pip install email-validator
 ```
 ## Database Setup Required
-
+-----
 Ensure Latest MySQL version is set up locally with a database called shopping_db. The following connection details are used in the project(SECTION 2):
 
 ```python
@@ -42,13 +42,14 @@ connection = sqlConn.connection
 -----
 
 ## Successful execution of code
+-----
 As soon as database connection is setup all the code can be simply ran by running SECTION 1 - 9 in Jupyter Notebook .ipynb file, as each section separately provides details required.
 -----
 
 
 
 ## SQLConnection Class
-
+-----
 The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL database and executing queries. It handles:
 
 - Establishing a connection to the database
@@ -59,8 +60,7 @@ The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL d
 -----
 
 ## Table Creation Queries (Implemented within python jupyter notebook)
-
-
+-----
 SECTION 4 provides 3 tables creation: users, roles and products. Run this SECTION to either recreate or newly create tables if deleted during testing.
 
 They are run via Jupyter Notebook as many times as needed, as it provides the ability to recreate tables if they are deleted during testing process.
@@ -89,58 +89,66 @@ CREATE TABLE IF NOT EXISTS products (
 ```
 -----
 ## Data creation
+-----
 SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
 -----
 ## Data gathering and collection
-
+-----
 An example of data gathering with UserManipulation, RoleManipulation and ProductManipulation classes and collection in classes User, Role and Product is shown is SECTION 9 where examples are provided of how to get and set the data.
 -----
 
 ## User Management
+-----
 Run SECTION 5 code to build classes UserManipulation, User
 
 ### UserManipulation Class
+-----
 Handles database actions related to users such as registration, login, retrieving user details, updating user information, and deleting users.
 
 ### User Class
-
+-----
 Stores user data for convenience and provides methods to retrieve user information.
 
 -----
 
 ## Role Management
+-----
 Run SECTION 5 code to build classes RoleManipulation, Role
 ### RoleManipulation Class
+-----
 Handles database actions related to roles such as creating roles, retrieving all roles, and retrieving roles by ID or type.
 
 ### Role Class
-
+-----
 Stores role data for convenience and provides methods to retrieve role information.
 
 ### RoleName Enum
-
+-----
 Defines role names and allows for easy expansion.
 
 
 -----
 
 ## Product Management
+-----
 Run SECTION 5 code to build classes ProductManipulation, Product
 ### ProductManipulation Class
+-----
 Handles database actions related to products such as creating products, retrieving product details, updating product information, and deleting products.
 
 ### Product Class
-
+-----
 Stores product data for convenience and provides methods to retrieve product information.
 
 -----
 ## Multi-Factor Authentication (MFA)
-
+-----
 The MFA class implements MFA using PyOTP. It generates and verifies time-based one-time passwords (TOTPs).
 
 -----
 
 ## User Processing
+-----
 Run SECTION 5 code to build class MFA.
 
 The UserProcessing class handles user registration and login processes, including password validation, email validation, and MFA verification.
@@ -148,18 +156,19 @@ The UserProcessing class handles user registration and login processes, includin
 -----
 
 ## TESTING 
+-----
 SECTION 8 is responsible for running tests. Running that section will provide details if tests have passed. Test cases should be setup appropriately for your test data.
 ## Test SQL Connectivity
 
 ### Class: TestSQLConnection
-
+-----
 - testCreateServerConnection: Verifies successful database connection.
 - testCloseConnection: Ensures the database connection can be closed properly.
 
 ## Test User Management
 
 ### Class: TestUserManipulation
-
+-----
 - testLoginUser: Tests the user login functionality.
 - testGetUserById: Verifies retrieval of user details by user ID.
 - testGetUserByEmail: Ensures user details can be retrieved by email.
@@ -169,7 +178,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Role Management
 
 ### Class: TestRoleManipulation
-
+-----
 - testCreateRole: Ensures a new role can be created.
 - testGetAllRoles: Verifies retrieval of all roles.
 - testGetRoleById: Tests retrieval of role details by role ID.
@@ -178,7 +187,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Product Management
 
 ### Class: TestProductManipulation
-
+-----
 - testCreateProduct: Verifies that a product can be created.
 - testGetAllProducts: Ensures all products can be retrieved.
 - testGetProductById: Tests retrieval of product details by product ID.
@@ -188,14 +197,14 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Multi-Factor Authentication
 
 ### Class: TestMFA
-
+-----
 - testVerifyPin: Tests the verification of a generated PIN.
 - testShowPin: Verifies the generation of a PIN.
 
 ## Test User Functional
 
 ### Class: TestUserFunctional
-
+-----
 - testRegistrationLogin: Tests the full registration and login process.
 - testFailedRegistration: Verifies registration failure with duplicate email.
 - testRegistrationWrongEmailFormat: Ensures registration fails with incorrect email format.
@@ -209,7 +218,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ### User Class
 
 ### Class: TestUser
-
+-----
 - testGetDataPlain: Tests plain data retrieval of a user.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
 - testGetDataDictionary: Ensures dictionary format data retrieval.
@@ -218,21 +227,21 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ### Role Class
 
 ### Class: TestRole
-
+-----
 - testGetDataPlain: Tests plain data retrieval of a role.
 - testGetDataDictionary: Verifies dictionary format data retrieval.
 
 ### Product Class
 
 ### Class: TestProduct
-
+-----
 - testGetDataPlain: Tests plain data retrieval of a product.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
 - testGetDataDictionary: Ensures dictionary format data retrieval.
 
 
 ## References to Libraries
-
+-----
 
 MySql. (2024) MySQL Connector/Python Developer Guide. Available from: https://dev.mysql.com/doc/connector-python/en/ [Accessed 20 July 2024]
 
@@ -243,3 +252,5 @@ kislyuk & nathforge (2023) pyotp 2.9.0. Available from: https://pypi.org/project
 Kehrer, P. (2024) bcrypt 4.1.3. Available from: https://pypi.org/project/bcrypt/#description [Accessed 20 July 2024]
 
 Tauberer, J. (2024) email-validator 2.2.0. Available from: https://pypi.org/project/email-validator/#description [Accessed 20 July 2024]
+
+-----
