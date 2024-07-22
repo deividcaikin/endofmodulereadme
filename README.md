@@ -229,3 +229,16 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
 - testGetDataDictionary: Ensures dictionary format data retrieval.
 
+
+## References to Libraries
+
+
+MySql. (2024) MySQL Connector/Python Developer Guide. Available from: https://dev.mysql.com/doc/connector-python/en/ [Accessed 20 July 2024]
+
+Batra, T. (2020) password-validator 1.0. Available from: https://pypi.org/project/password-validator/ [Accessed 20 July 2024]
+
+kislyuk & nathforge (2023) pyotp 2.9.0. Available from: https://pypi.org/project/pyotp/ [Accessed 20 July 2024]
+
+Kehrer, P. (2024) bcrypt 4.1.3. Available from: https://pypi.org/project/bcrypt/#description [Accessed 20 July 2024]
+
+Tauberer, J. (2024) email-validator 2.2.0. Available from: https://pypi.org/project/email-validator/#description [Accessed 20 July 2024]
