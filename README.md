@@ -14,11 +14,13 @@ Before running the project, make sure you have the following Python libraries in
 - Email validation library
 
 With according commands:
-- !pip install mysql-connector-python --upgrade
-- !pip install password-validator
-- !pip install pyotp
-- !pip install bcrypt
-- !pip install email-validator
+```sh
+!pip install mysql-connector-python --upgrade
+!pip install password-validator
+!pip install pyotp
+!pip install bcrypt
+!pip install email-validator
+```
 
 -----
 
@@ -33,7 +35,7 @@ database = "shopping_db"
 
 -----
 
-##SQLConnection Class
+## SQLConnection Class
 
 The SQLConnection class is responsible for connecting to the MySQL database and executing queries. It handles:
 
@@ -44,70 +46,70 @@ The SQLConnection class is responsible for connecting to the MySQL database and 
 
 -----
 
-##Table Creation Queries (Implemented within python jupyter notebook)
+## Table Creation Queries (Implemented within python jupyter notebook)
 They are run via Jupyter Notebook as many times as needed, as it provides the ability to recreate tables if they are deleted during testing proccess
 
 -----
 
-##User Management
+## User Management
 
-###UserManipulation Class
+### UserManipulation Class
 Handles database actions related to users such as registration, login, retrieving user details, updating user information, and deleting users.
 
-###User Class
+### User Class
 
 Stores user data for convenience and provides methods to retrieve user information.
 
 -----
 
-##Role Management
+## Role Management
 
-###RoleManipulation Class
+### RoleManipulation Class
 Handles database actions related to roles such as creating roles, retrieving all roles, and retrieving roles by ID or type.
 
-###Role Class
+### Role Class
 
 Stores role data for convenience and provides methods to retrieve role information.
 
-###RoleName Enum
+### RoleName Enum
 
 Defines role names and allows for easy expansion.
 
 
 -----
 
-##Product Management
+## Product Management
 
-###ProductManipulation Class
+### ProductManipulation Class
 Handles database actions related to products such as creating products, retrieving product details, updating product information, and deleting products.
 
-###Product Class
+### Product Class
 
 Stores product data for convenience and provides methods to retrieve product information.
 
 -----
-##Multi-Factor Authentication (MFA)
+## Multi-Factor Authentication (MFA)
 
 The MFA class implements MFA using PyOTP. It generates and verifies time-based one-time passwords (TOTPs).
 
 -----
 
-##User Processing
+## User Processing
 
 The UserProccessing class handles user registration and login processes, including password validation, email validation, and MFA verification.
 
 -----
 
-##Test SQL Connectivity
+## Test SQL Connectivity
 
-###Class: TestSQLConnection
+### Class: TestSQLConnection
 
 - testCreateServerConnection: Verifies successful database connection.
 - testCloseConnection: Ensures the database connection can be closed properly.
 
-##Test User Management
+## Test User Management
 
-###Class: TestUserManipulation
+### Class: TestUserManipulation
 
 - testLoginUser: Tests the user login functionality.
 - testGetUserById: Verifies retrieval of user details by user ID.
@@ -115,18 +117,18 @@ The UserProccessing class handles user registration and login processes, includi
 - testGetAllUsers: Checks if all users can be retrieved.
 - testUpdateUser: Tests updating user details.
 
-##Test Role Management
+## Test Role Management
 
-###Class: TestRoleManipulation
+### Class: TestRoleManipulation
 
 - testCreateRole: Ensures a new role can be created.
 - testGetAllRoles: Verifies retrieval of all roles.
 - testGetRoleById: Tests retrieval of role details by role ID.
 - testGetRoleByType: Ensures retrieval of role details by role type.
 
-##Test Product Management
+## Test Product Management
 
-###Class: TestProductManipulation
+### Class: TestProductManipulation
 
 - testCreateProduct: Verifies that a product can be created.
 - testGetAllProducts: Ensures all products can be retrieved.
@@ -134,16 +136,16 @@ The UserProccessing class handles user registration and login processes, includi
 - testGetProductByName: Verifies retrieval of product details by product name.
 - testUpdateProduct: Ensures product details can be updated.
 
-##Test Multi-Factor Authentication
+## Test Multi-Factor Authentication
 
-###Class: TestMFA
+### Class: TestMFA
 
 - testVerifyPin: Tests the verification of a generated PIN.
 - testShowPin: Verifies the generation of a PIN.
 
-##Test User Functional
+## Test User Functional
 
-###Class: TestUserFunctional
+### Class: TestUserFunctional
 
 - testRegistrationLogin: Tests the full registration and login process.
 - testFailedRegistration: Verifies registration failure with duplicate email.
@@ -153,27 +155,27 @@ The UserProccessing class handles user registration and login processes, includi
 - testLoginWithWrongEmailAndPass: Ensures login fails with incorrect email and password.
 - testLoginWithWrongPass: Tests login failure with incorrect password.
 
-##Test Data Classes
+## Test Data Classes
 
-###User Class
+### User Class
 
-##Class: TestUser
+### Class: TestUser
 
 - testGetDataPlain: Tests plain data retrieval of a user.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
 - testGetDataDictionary: Ensures dictionary format data retrieval.
 - testGetRoleName: Tests retrieval of the role name associated with the user.
 
-###Role Class
+### Role Class
 
 ### Class: TestRole
 
 - testGetDataPlain: Tests plain data retrieval of a role.
 - testGetDataDictionary: Verifies dictionary format data retrieval.
 
-###Product Class
+### Product Class
 
-###Class: TestProduct
+### Class: TestProduct
 
 - testGetDataPlain: Tests plain data retrieval of a product.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
