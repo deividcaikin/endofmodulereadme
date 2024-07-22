@@ -1,10 +1,10 @@
 # Shopping Database Project
 
-This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local instalation of MySql database with login details. It also provides unit testing capabilities.
+This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local installation of MySql database with login details. It also provides unit testing capabilities.
 
 Main focus of this project is to show encryption and MFA capabilities with fully functional DB and data exchange capabilities.
 
-As this project is implemented using local DB and Jupyter Notebook most of the code references will be specified as "Run code 'SECION 6', 'SECTION 7' etc."
+As this project is implemented using local DB and Jupyter Notebook most of the code references will be specified as "Run code 'SECTION 6', 'SECTION 7' etc."
 
 -----
 
@@ -63,9 +63,30 @@ The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL d
 
 SECTION 4 provides 3 tables creation: users, roles and products. Run this SECTION to either recreate or newly create tables if deleted during testing.
 
-They are run via Jupyter Notebook as many times as needed, as it provides the ability to recreate tables if they are deleted during testing proccess.
+They are run via Jupyter Notebook as many times as needed, as it provides the ability to recreate tables if they are deleted during testing process.
+```mysql
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+CREATE TABLE IF NOT EXISTS roles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    role_name VARCHAR(255) NOT NULL
+);
 
+CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 -----
 ## Data creation
 SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
@@ -121,7 +142,7 @@ The MFA class implements MFA using PyOTP. It generates and verifies time-based o
 ## User Processing
 Run SECTION 5 code to build class MFA.
 
-The UserProccessing class handles user registration and login processes, including password validation, email validation, and MFA verification.
+The UserProcessing class handles user registration and login processes, including password validation, email validation, and MFA verification.
 
 -----
 
