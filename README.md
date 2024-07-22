@@ -67,10 +67,10 @@ They are run via Jupyter Notebook as many times as needed, as it provides the ab
 
 
 -----
-##Data creation
+## Data creation
 SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
 -----
-##Data gathering and collection
+## Data gathering and collection
 An example of data gathering with UserManipulation, RoleManipulation and ProductManipulation classes and collection in classes User, Role and Product is shown is SECTION 9 where examples are provided of how to get and set the data.
 -----
 
