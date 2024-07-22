@@ -1,4 +1,4 @@
-# Shopping System Project
+# Shopping Security System Project
 
 This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local installation of MySql database with login details. It also provides unit testing capabilities.
 
@@ -92,6 +92,7 @@ CREATE TABLE IF NOT EXISTS products (
 SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
 -----
 ## Data gathering and collection
+
 An example of data gathering with UserManipulation, RoleManipulation and ProductManipulation classes and collection in classes User, Role and Product is shown is SECTION 9 where examples are provided of how to get and set the data.
 -----
 
