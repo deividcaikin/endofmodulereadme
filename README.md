@@ -230,7 +230,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test User Functional
 
 ### Class: TestUserFunctional
-<br>
+<br></br>
 -----
 - testRegistrationLogin: Tests the full registration and login process.
 - testFailedRegistration: Verifies registration failure with duplicate email.
@@ -245,7 +245,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ### User Class
 
 ### Class: TestUser
-<br>
+<br></br>
 -----
 - testGetDataPlain: Tests plain data retrieval of a user.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
@@ -255,7 +255,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ### Role Class
 
 ### Class: TestRole
-<br>
+<br></br>
 -----
 - testGetDataPlain: Tests plain data retrieval of a role.
 - testGetDataDictionary: Verifies dictionary format data retrieval.
@@ -263,7 +263,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ### Product Class
 
 ### Class: TestProduct
-<br>
+<br></br>
 -----
 - testGetDataPlain: Tests plain data retrieval of a product.
 - testGetDataPlainNoDates: Verifies plain data retrieval without dates.
@@ -271,7 +271,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 
 
 ## References to Libraries
-<br>
+<br></br>
 -----
 
 MySql. (2024) MySQL Connector/Python Developer Guide. Available from: https://dev.mysql.com/doc/connector-python/en/ [Accessed 20 July 2024]
