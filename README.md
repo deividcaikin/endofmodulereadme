@@ -1,4 +1,4 @@
-# Shopping Database Project
+# Shopping System Project
 
 This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local installation of MySql database with login details. It also provides unit testing capabilities.
 
