@@ -41,7 +41,7 @@ connection = sqlConn.connection
 
 -----
 
-##Successful execution of code
+## Successful execution of code
 As soon as database connection is setup all the code can be simply ran by running SECTION 1 - 9 in Jupyter Notebook .ipynb file, as each section separately provides details required.
 -----
 
