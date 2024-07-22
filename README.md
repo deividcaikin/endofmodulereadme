@@ -1,5 +1,5 @@
 # Shopping Security System Project
-<br>
+<br></br>
 -----
 This project is a Python implementation for managing a shopping database, including user registration, login with multi-factor authentication (MFA), role management, and product management. The project uses MySQL as the database and is designed to be run in a Jupyter Notebook environment together with local installation of MySql database with login details. It also provides unit testing capabilities.
 
@@ -10,7 +10,7 @@ As this project is implemented using local DB and Jupyter Notebook most of the c
 -----
 
 ## Libraries Required
-<br>
+<br></br>
 -----
 Before running the project, make sure you have the following Python libraries installed:
 - MySQL Connector library
@@ -28,7 +28,7 @@ With according commands (SECTION 1):
 !pip install email-validator
 ```
 ## Database Setup Required
-<br>
+<br></br>
 -----
 Ensure Latest MySQL version is set up locally with a database called shopping_db. The following connection details are used in the project(SECTION 2):
 
@@ -45,7 +45,7 @@ connection = sqlConn.connection
 -----
 
 ## Successful execution of code
-<br>
+<br></br>
 -----
 As soon as database connection is setup all the code can be simply ran by running SECTION 1 - 9 in Jupyter Notebook .ipynb file, as each section separately provides details required.
 -----
@@ -53,7 +53,7 @@ As soon as database connection is setup all the code can be simply ran by runnin
 
 
 ## SQLConnection Class
-<br>
+<br></br>
 -----
 The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL database and executing queries. It handles:
 
@@ -65,7 +65,7 @@ The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL d
 -----
 
 ## Table Creation Queries (Implemented within python jupyter notebook)
-<br>
+<br></br>
 -----
 SECTION 4 provides 3 tables creation: users, roles and products. Run this SECTION to either recreate or newly create tables if deleted during testing.
 
@@ -95,49 +95,49 @@ CREATE TABLE IF NOT EXISTS products (
 ```
 -----
 ## Data creation
-<br>
+<br></br>
 -----
 SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
 -----
 ## Data gathering and collection
-<br>
+<br></br>
 -----
 An example of data gathering with UserManipulation, RoleManipulation and ProductManipulation classes and collection in classes User, Role and Product is shown is SECTION 9 where examples are provided of how to get and set the data.
 -----
 
 ## User Management
-<br>
+<br></br>
 -----
 Run SECTION 5 code to build classes UserManipulation, User
 
 ### UserManipulation Class
-<br>
+<br></br>
 -----
 Handles database actions related to users such as registration, login, retrieving user details, updating user information, and deleting users.
 
 ### User Class
-<br>
+<br></br>
 -----
 Stores user data for convenience and provides methods to retrieve user information.
 
 -----
 
 ## Role Management
-<br>
+<br></br>
 -----
 Run SECTION 5 code to build classes RoleManipulation, Role
 ### RoleManipulation Class
-<br>
+<br></br>
 -----
 Handles database actions related to roles such as creating roles, retrieving all roles, and retrieving roles by ID or type.
 
 ### Role Class
-<br>
+<br></br>
 -----
 Stores role data for convenience and provides methods to retrieve role information.
 
 ### RoleName Enum
-<br>
+<br></br>
 -----
 Defines role names and allows for easy expansion.
 
@@ -145,29 +145,29 @@ Defines role names and allows for easy expansion.
 -----
 
 ## Product Management
-<br>
+<br></br>
 -----
 Run SECTION 5 code to build classes ProductManipulation, Product
 ### ProductManipulation Class
-<br>
+<br></br>
 -----
 Handles database actions related to products such as creating products, retrieving product details, updating product information, and deleting products.
 
 ### Product Class
-<br>
+<br></br>
 -----
 Stores product data for convenience and provides methods to retrieve product information.
 
 -----
 ## Multi-Factor Authentication (MFA)
-<br>
+<br></br>
 -----
 The MFA class implements MFA using PyOTP. It generates and verifies time-based one-time passwords (TOTPs).
 
 -----
 
 ## User Processing
-<br>
+<br></br>
 -----
 Run SECTION 5 code to build class MFA.
 
@@ -176,13 +176,13 @@ The UserProcessing class handles user registration and login processes, includin
 -----
 
 ## TESTING 
-<br>
+<br></br>
 -----
 SECTION 8 is responsible for running tests. Running that section will provide details if tests have passed. Test cases should be setup appropriately for your test data.
 ## Test SQL Connectivity
 
 ### Class: TestSQLConnection
-<br>
+<br></br>
 -----
 - testCreateServerConnection: Verifies successful database connection.
 - testCloseConnection: Ensures the database connection can be closed properly.
@@ -190,7 +190,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test User Management
 
 ### Class: TestUserManipulation
-<br>
+<br></br>
 -----
 - testLoginUser: Tests the user login functionality.
 - testGetUserById: Verifies retrieval of user details by user ID.
@@ -201,7 +201,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Role Management
 
 ### Class: TestRoleManipulation
-<br>
+<br></br>
 -----
 - testCreateRole: Ensures a new role can be created.
 - testGetAllRoles: Verifies retrieval of all roles.
@@ -211,7 +211,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Product Management
 
 ### Class: TestProductManipulation
-<br>
+<br></br>
 -----
 - testCreateProduct: Verifies that a product can be created.
 - testGetAllProducts: Ensures all products can be retrieved.
@@ -222,7 +222,7 @@ SECTION 8 is responsible for running tests. Running that section will provide de
 ## Test Multi-Factor Authentication
 
 ### Class: TestMFA
-<br>
+<br></br>
 -----
 - testVerifyPin: Tests the verification of a generated PIN.
 - testShowPin: Verifies the generation of a PIN.
@@ -284,4 +284,3 @@ Kehrer, P. (2024) bcrypt 4.1.3. Available from: https://pypi.org/project/bcrypt/
 
 Tauberer, J. (2024) email-validator 2.2.0. Available from: https://pypi.org/project/email-validator/#description [Accessed 20 July 2024]
 
------
