@@ -25,9 +25,6 @@ With according commands (SECTION 1):
 !pip install bcrypt
 !pip install email-validator
 ```
-
------
-
 ## Database Setup Required
 
 Ensure Latest MySQL version is set up locally with a database called shopping_db. The following connection details are used in the project(SECTION 2):
@@ -44,9 +41,15 @@ connection = sqlConn.connection
 
 -----
 
+##Successful execution of code
+As soon as database connection is setup all the code can be simply ran by running SECTION 1 - 9 in Jupyter Notebook .ipynb file, as each section separately provides details required.
+-----
+
+
+
 ## SQLConnection Class
 
-The SQLConnection class is responsible for connecting to the MySQL database and executing queries. It handles:
+The SQLConnection class (SECTION 3) is responsible for connecting to the MySQL database and executing queries. It handles:
 
 - Establishing a connection to the database
 - Closing the connection
@@ -63,6 +66,12 @@ SECTION 4 provides 3 tables creation: users, roles and products. Run this SECTIO
 They are run via Jupyter Notebook as many times as needed, as it provides the ability to recreate tables if they are deleted during testing proccess.
 
 
+-----
+##Data creation
+SECTION 7 is responsible for creating test data for Product and Roles. It was used to test whether the set up of data is correct.
+-----
+##Data gathering and collection
+An example of data gathering with UserManipulation, RoleManipulation and ProductManipulation classes and collection in classes User, Role and Product is shown is SECTION 9 where examples are provided of how to get and set the data.
 -----
 
 ## User Management
@@ -117,7 +126,7 @@ The UserProccessing class handles user registration and login processes, includi
 -----
 
 ## TESTING 
-SECTION 9 is responsible for running tests. Running that section will provide details if tests have passed.
+SECTION 8 is responsible for running tests. Running that section will provide details if tests have passed. Test cases should be setup appropriately for your test data.
 ## Test SQL Connectivity
 
 ### Class: TestSQLConnection
